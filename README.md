@@ -1,3 +1,11 @@
-Our documentation is kept here rather than putting it in a season-specific repository.
+### GirlsOfSteelRobotics / Docs 
 
-See the [Docs Wiki](https://github.com/GirlsOfSteelRobotics/Docs/wiki)
+### [Docs Wiki](https://github.com/GirlsOfSteelRobotics/Docs/wiki)
+
+Follow the link above to read our programmer's documentation:
+* Setting up the Eclipse programming environment
+* Working with Git and GitHub
+* Troubleshooting problems
+
+_Note: This repository is dedicated to the documentation kept in wiki pages, so it shouldn't contain any Java code. 
+Use the season-specific repositories for storing Eclipse projects._
