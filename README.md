@@ -9,3 +9,5 @@ Follow the link above to read our programmer's documentation:
 
 _Note: This repository is dedicated to the documentation kept in wiki pages, so it shouldn't contain any Java code. 
 Use the season-specific repositories for storing Eclipse projects._
+
+This is a test of merging changes from multiple branches using a Pull Request. -Joe.
