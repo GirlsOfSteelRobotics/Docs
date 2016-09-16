@@ -13,3 +13,4 @@ _Note: This repository is dedicated to the documentation kept in wiki pages, so 
 Use the season-specific repositories for storing Eclipse projects._
 
 This is a test of merging changes from multiple branches using a Pull Request. -Joe.
+This has been edited by Corinne
