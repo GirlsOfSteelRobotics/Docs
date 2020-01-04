@@ -65,6 +65,18 @@ mkdir -p "$wpidir"
 tar xzf "$tarball" -C "$wpidir"/
 ls -ld "$wpidir"*
 
+# Run the Tools Installer script
+if [ -r "$WPIDIR"/tools/ToolsUpdater.py ]
+then
+    echo ""
+    echo "Running tools installer: python $WPIDIR/tools/ToolsUpdater.py"
+    python "$WPIDIR"/tools/ToolsUpdater.py
+else
+    echo ""
+    echo "FAILED to locate $WPIDIR/tools/ToolsUpdater.py! Tools not installed!"
+    exit 1
+fi
+
 echo ""
 echo "Successfully installed WPILib*.tar.gz to $wpidir"
 echo ""
