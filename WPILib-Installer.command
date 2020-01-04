@@ -77,6 +77,21 @@ else
     exit 1
 fi
 
+# Install VS Code extensions
+echo ""
+echo "Installing Visual Studio Code extensions required for FRC"
+code="/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code"
+"$code" --install-extension "$wpidir"/vsCodeExtensions/Cpp.vsix       2>&1 | grep -v DEP0005
+"$code" --install-extension "$wpidir"/vsCodeExtensions/JavaLang.vsix  2>&1 | grep -v DEP0005
+"$code" --install-extension "$wpidir"/vsCodeExtensions/JavaDeps.vsix  2>&1 | grep -v DEP0005
+"$code" --install-extension "$wpidir"/vsCodeExtensions/JavaDebug.vsix 2>&1 | grep -v DEP0005
+"$code" --install-extension "$wpidir"/vsCodeExtensions/WPILib.vsix    2>&1 | grep -v DEP0005
+
+echo ""
+echo "Don't forget to:"
+echo "Shift-Command-P WPILIB: Set VS Code Java Home"
+echo "Shift-Command-P WPILIB: Set Team Number"
+
 echo ""
 echo "Successfully installed WPILib*.tar.gz to $wpidir"
 echo ""
