@@ -5,21 +5,22 @@
 # Put the CTRE zip file in the same folder as this file or in the Downloads folder
 
 # Joseph Jackson
-# 20-Jan-2019
+# 4-Jan-2020
 # FRC Team 3504, Girls of Steel, Pittsburgh, PA
 
 # The working directory is set to the user's home directory, so change to the location of this file
 scriptdir=`dirname "${BASH_SOURCE[0]}"`
 cd "$scriptdir"
+wpidir="$HOME"/wpilib/2020
 
 # Confirm the ~/frc2019 directory exists before continuing with this installation
-if [ ! -d "$HOME"/frc2019 ]
+if [ ! -d "$wpidir" ]
 then
     echo ""
     echo ""
     echo ""
     echo "FAILED to install CTRE Phoenix Library!"
-    echo "Install the WPILib package to ~/frc2019/ before installing the CTRE Phoenix Library"
+    echo "Install the WPILib package to $wpidir before installing the CTRE Phoenix Library"
     echo ""
     echo ""
     echo ""
@@ -27,15 +28,15 @@ then
 fi
 
 # Create the destination directories if they don't already exist
-mkdir -p "$HOME"/frc2019/vendordeps
-mkdir -p "$HOME"/frc2019/maven/com/ctre
+mkdir -p "$wpidir"/vendordeps
+mkdir -p "$wpidir"/maven/com/ctre
 
 # Remove old versions, if they exist
 # Use verbose to show what was removed
 echo ""
 echo "Removing any old versions of the CTRE libraries:"
-rm -fv "$HOME"/frc2019/vendordeps/Phoenix.json
-rm -rfv "$HOME"/frc2019/maven/com/ctre/*
+rm -fv "$wpidir"/vendordeps/Phoenix.json
+rm -rfv "$wpidir"/maven/com/ctre/*
 
 # Find the CTRE zip file by looking in the same directory as this script and the ~/Downloads folder
 # Choose the newest one by sorting the output of "ls" by time, in reverse order, and taking the last
@@ -53,9 +54,8 @@ fi
 # Extract the Java libraries and docs from the CTRE zip file, overwriting any that already exist
 echo ""
 echo "Installing the CTRE vendor dependency file and libraries:"
-unzip -o "$zipfile" 'vendordeps/*' -d "$HOME"/frc2019/
-unzip -o "$zipfile" 'maven/com/ctre/*'  -d "$HOME"/frc2019/
-#chmod 755 $HOME/wpilib/user/java/lib/*
+unzip -o "$zipfile" 'vendordeps/*' -d "$wpidir"/
+unzip -o "$zipfile" 'maven/com/ctre/*'  -d "$wpidir"/
 
 echo ""
 echo "Successfully installed CTRE Phoenix libraries for FRC Java"
