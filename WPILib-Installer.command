@@ -21,6 +21,14 @@ then
     rm -rf "$HOME"/frc2019 "$HOME"/frc2019.old
 fi
 
+# Clean up stuff from 2017 or earlier since they were in the top level of ~/wpilib/
+if [ -d "$HOME"/wpilib/[a-zA-Z]* ]
+then
+    echo ""
+    echo "Removing 2017 and older WPI files from ~/wpilib/*"
+    rm -rf "$HOME"/wpilib/[a-zA-Z]*
+fi
+
 # If a previous run of this script has left behind a backup directory, get rid of it
 if [ -d "$wpidir".old ]
 then
