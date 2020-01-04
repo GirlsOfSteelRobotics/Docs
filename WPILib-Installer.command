@@ -66,14 +66,14 @@ tar xzf "$tarball" -C "$wpidir"/
 ls -ld "$wpidir"*
 
 # Run the Tools Installer script
-if [ -r "$WPIDIR"/tools/ToolsUpdater.py ]
+if [ -r "$wpidir"/tools/ToolsUpdater.py ]
 then
     echo ""
-    echo "Running tools installer: python $WPIDIR/tools/ToolsUpdater.py"
-    python "$WPIDIR"/tools/ToolsUpdater.py
+    echo "Running tools installer: python $wpidir/tools/ToolsUpdater.py"
+    python "$wpidir"/tools/ToolsUpdater.py
 else
     echo ""
-    echo "FAILED to locate $WPIDIR/tools/ToolsUpdater.py! Tools not installed!"
+    echo "FAILED to locate $wpidir/tools/ToolsUpdater.py! Tools not installed!"
     exit 1
 fi
 
