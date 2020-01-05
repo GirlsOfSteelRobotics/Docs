@@ -13,7 +13,7 @@ scriptdir=`dirname "${BASH_SOURCE[0]}"`
 cd "$scriptdir"
 wpidir="$HOME"/wpilib/2020
 
-# Confirm the ~/frc2019 directory exists before continuing with this installation
+# Confirm the WPILib directory exists before continuing with this installation
 if [ ! -d "$wpidir" ]
 then
     echo ""
