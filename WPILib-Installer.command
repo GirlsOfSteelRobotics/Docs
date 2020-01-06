@@ -77,6 +77,11 @@ else
     exit 1
 fi
 
+# Install "git", included with Apple's Developer Command Line Tools
+echo ""
+echo "Installing Developer Command Line Tools from Apple"
+xcode-select --install
+
 # Install VS Code extensions
 echo ""
 echo "Installing Visual Studio Code extensions required for FRC"
