@@ -1,17 +1,18 @@
 ### GirlsOfSteelRobotics / Docs 
 
-### [Docs Wiki](https://github.com/GirlsOfSteelRobotics/Docs/wiki)
+This repository is no longer maintained! 
 
-Follow the link above to read our programmer's documentation:
-* Setting up the Eclipse programming environment
-* Working with Git and GitHub
-* Troubleshooting problems
-* and more!
+All of the former contents are out of date, so this repo is only left around in case someone has links to these pages.
 
-### CTRE-Installer.command
+#### Docs Wiki
 
-This is a Mac installer for the Cross The Road Electronics Java libraries. Put the CTRE zip file next to this
-file or in your Downloads folder, then double-click the command file to run the script.
+Moved to https://girlsofsteeldocs.readthedocs.io/
 
-_Note: This repository is dedicated to the documentation kept in wiki pages, so it shouldn't contain any Java code. 
-Use the season-specific repositories for storing Eclipse projects._
+#### CTRE-Installer.command
+
+We've switched to the online Phoenix library instead of a locally installed copy. 
+CTRE doesn't provide the Phoenix Tuner tool for the Mac, so there's nothing left to install.
+
+#### WPILib-Installer.command
+
+As of 2020 or so, WPI distributes a proper WPILib installer for the Mac so this script is no longer necessary.
